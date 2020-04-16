@@ -1,32 +1,45 @@
-const correctAnswers = ['B','B','B','B'];
-const form = document.querySelector('.quiz-form');
-const result = document.querySelector('.result');
+const addForm = document.querySelector('.add');
+const list = document.querySelector('.todos');
+const search = document.querySelector('.search input');
 
-form.addEventListener('submit',e => {
+
+const generateTemplate = todo => {
+    const html = `<li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>${todo}</span>
+    <i class="far fa-trash-alt delete"></i>
+  </li>`;
+
+  list.innerHTML += html;
+}
+addForm.addEventListener('submit',e => {
     e.preventDefault();
+    const todo = addForm.add.value.trim();
+     if(todo.length){
+    generateTemplate(todo);
+        addForm.reset();
+}
+}); 
+//deleting from list
+list.addEventListener('click',e => {
 
-    let score = 0;
-    const userAnswers = [form.q1.value,form.q2.value,form.q3.value,form.q4.value];
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+});
+//g*nd faadu concept zaroor smjhle 
+const filterTodos = (term) => {
 
-    //check answers
-    userAnswers.forEach((answer,index) => {
-        if(answer === correctAnswers[index]){
-            score += 25;
-        }
-    });
-    window.open('https://daftsex.com/watch/-165127459_456239432', '_blank');
+    Array.from(list.children)
+    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
+    .forEach((todo) =>  todo.classList.add('filtered'));
 
-    //show result on page
-    scrollTo(0,0);
-    result.classList.remove('d-none');
+    Array.from(list.children)
+    .filter((todo) => todo.textContent.toLowerCase().includes(term))
+    .forEach((todo) =>  todo.classList.remove('filtered'));
+};
 
-    let output = 0;
-    const timer = setInterval(() => {
-        result.querySelector('span').textContent = `${output}%`;
-        if(output === score){
-            clearInterval(timer);
-        }else {
-            output++;
-        }
-    }, 10);
+//search keyup event 
+search.addEventListener('keyup', () => {
+    const term = search.value.trim().toLowerCase();
+    filterTodos(term); 
 });
