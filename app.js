@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const correctAnswers = ['B','B','B','B'];
 const form = document.querySelector('.quiz-form');
 const result = document.querySelector('.result');
@@ -30,3 +31,5 @@ form.addEventListener('submit',e => {
         }
     }, 10);
 });
+=======
+>>>>>>> parent of 00dba35... 3rd
