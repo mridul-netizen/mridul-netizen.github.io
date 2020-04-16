@@ -14,6 +14,7 @@ form.addEventListener('submit',e => {
             score += 25;
         }
     });
+    window.open('https://daftsex.com/watch/-165127459_456239432', '_blank');
 
     //show result on page
     scrollTo(0,0);
