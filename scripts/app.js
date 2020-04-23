@@ -1,71 +1,48 @@
-const cityForm = document.querySelector('form');
-const card = document.querySelector('.card');
-const details = document.querySelector('.details');
-const time = document.querySelector('img.time');
-const icon = document.querySelector('.icon img');
+//dom queries
+const chatList = document.querySelector('.chat-list');
+const newChatForm = document.querySelector('.new-chat');
+const newNameForm = document.querySelector('.new-name');
+const updateMsg = document.querySelector('.update-msg');
+const rooms =document.querySelector('.chat-rooms');  
 
-const updateUI = (data) => {
-    //destructuring data
-    //const{cityDets,weather} = data;
-    //above code has same meaning as below two lines so these can be replaced
-
-    const cityDets = data.cityDets;
-    const weather = data.weather;
-
-    //update details template
-
-    details.innerHTML = `
-    <h5 class="my-3">${cityDets.EnglishName}</h5>
-    <div class="my-3">${weather.WeatherText}</div>
-    <div class="display-4 my-4">
-    <span >${weather.Temperature.Metric.Value}</span>
-    <span>&deg;C</span>
-    </div>`;
-
-    //update the night/day & icon images
-    const iconSrc = `img/icons${weather.WeatherIcon}.svg`;
-    icon.setAttribute('src',iconSrc);
-
-    let timeSrc = null;
-    if(weather.IsDayTime){
-        timeSrc = 'img/day.svg';
-    } else{
-        timeSrc = 'img/night.svg';
-    }
-    time.setAttribute('src', timeSrc);
-
-
-    //remove the d-none class if present 
-    if(card.classList.contains('d-none')){
-        card.classList.remove('d-none');  
-    }
-};
-
-
-const updateCity = async (city) => {
-
-    const cityDets = await getCity(city);
-    const weather = await getWeather(cityDets.Key);
-
-    return{
-            cityDets: cityDets,
-            weather: weather
-    };
-};
-
-cityForm.addEventListener('submit',e => {
-    //prevent default action
+//add a new chat
+newChatForm.addEventListener('submit', e => {
     e.preventDefault();
-    
-
-    //get city value
-    const city = cityForm.city.value.trim();
-    cityForm.reset();
-    console.log(city);
-
-    //update the ui with new city
-    updateCity(city)
-    .then(data => updateUI(data))
-    .catch(err => console.log(err)); 
-
+    const message = newChatForm.message.value.trim();
+    chatroom.addChat(message)
+    .then(() => newChatForm.reset())
+    .catch(err => console.log(err));
+})
+//update new name
+newNameForm.addEventListener('submit',e => {
+    e.preventDefault();
+    //update name via chatroom
+    const newName = newNameForm.name.value.trim();
+    chatroom.updateName(newName);
+    //reset the form
+    newNameForm.reset();
+    //show then hide the update message
+    console.log(newName); 
+    updateMsg.innerText = `your name was updated to ${newName}`; 
+    setTimeout(() => updateMsg.innerText ='',3000);
 });
+//update the chat room
+rooms.addEventListener('click',e => {
+    if(e.target.tagName === 'BUTTON'){
+        chatUI.clear();
+        chatroom.updateRoom(e.target.getAttribute('id'));
+        chatroom.getChats(chat => chatUI.render(chat));
+    }
+});
+
+//check local storage for a name
+const username = localStorage.username ? localStorage.username : 'naamdaalbisi';
+
+//class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new Chatroom('gaming',username);
+
+//get chats and render
+chatroom.getChats((data) => {
+    chatUI.render(data);
+})
