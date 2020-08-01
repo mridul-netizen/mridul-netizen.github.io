@@ -1,0 +1,79 @@
+
+.container{
+  max-width: 400px;
+}
+html {
+  scroll-behavior: smooth ;
+}
+
+#Home {
+  height: 1000px;
+  border: 2px solid black;
+  padding: 25px;
+  background-image: url("../assets/bg.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#WorldStats {
+  height: 1000px;
+  border: 2px solid black;
+  padding: 25px;
+  background-image: url("../assets/globe.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#IndiaStats {
+  height: 1000px;
+  border: 2px solid black;
+  padding: 25px;
+  background-image: url("../assets/India.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#Precautions {
+  height: 1000px;
+  border: 2px solid black;
+  padding: 25px;
+  background-image: url("../assets/Precautions.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#About {
+  height: 1000px;
+  border: 2px solid black;
+  padding: 25px;
+  background-image: url("../assets/About.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #121622;
+  position: sticky; /* Safari */
+  top: 0;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:green;
+}
+
+.active {
+  background-color: #4CAF50;
+}

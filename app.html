@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>COVID TRACKER</title>
+</head>
+<body>
+
+<ul>
+  <li><a href="#About">About</a></li>
+  <li><a href="#Precautions">Precautions</a></li>
+  <li><a href="#IndiaStats">India's Stats</a></li>
+  <li><a href="#WorldStats">World Stats</a></li>
+  <li><a href="#Home">Home</a></li>
+</ul>
+
+<!-- HOME -->
+
+<div class="main" id="Home">
+</div>
+
+<!-- WORLDSTATS -->
+  
+<div class="main" id="WorldStats">
+
+  <div class="container my-5 mx-auto">
+    <h1 class=" text-center">SEARCH FOR A COUNTRY</h1>
+    <form class="change-location my-4 text-center text-muted">
+      <input type="text" name="country" class="form-control p-4">
+    </form>
+    <div class="card rounded">
+      <img src="https://via.placeholder.com/400x300" class="time card-img-top">
+      <div class="icon bg-light mx-auto text-center">
+      <!-- icon here later -->
+      </div>
+      <div class="text-muted text-uppercase text-center details">
+        <h5 class="my-3">Country name</h5>
+        <div class="my-3">Covid condition</div>
+        <div class="display-4 ">
+        <span>PATients</span>
+      </div>
+      </div>
+    </div>
+  </div> 
+
+</div>
+
+<!-- INDIASTATS -->
+
+<div class="main" id="IndiaStats">
+
+  <div class="container">
+    <h1 class="text-muted text-center my-4">COVID-19</h1>
+    <form class="change-location my-4 text-center text-muted">
+      <label for="city">Enter a location for patient information</label>
+      <input type="text" name="country" class="form-control p-4">
+    </form>
+    <div class="card shadow-lg rounded">
+      <img src="https://via.placeholder.com/400x300" class="time card-img-top">
+      <div class="icon bg-light mx-auto text-center">
+      <!-- icon here later -->
+      </div>
+      <div class="text-muted text-uppercase text-center details">
+        <h5 class="my-3">Country name</h5>
+        <div class="my-3">Covid condition</div>
+        <div class="display-4 my-4">
+        <span>PATients</span>
+      </div>
+      </div>
+    </div>
+  </div> 
+
+</div>
+
+
+<!-- PRECAUTIONS -->
+
+<div class="main" id="Precautions">
+</div>
+
+<!-- ABOUT -->
+
+<div class="main" id="About">
+  <div class="text-muted text-uppercase text-center details">
+    made with ❤️ by Ajay and mridul</div>
+</div>
+
+<!-- SCRIPTS -->
+
+<script src="scripts/worldData.js"></script>
+<script src="scripts/indiaData.js"></script>
+<script src="scripts/app.js"></script>
+
+</body>
+</html>
