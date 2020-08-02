@@ -5,8 +5,29 @@
 html {
   scroll-behavior: smooth ;
 }
+.content {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+  font-size: 30px;
+  border-radius: 5%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  padding: 20px;
+}
+.symptoms {
+  height: 10px;
+  grid-column: 2;
+  grid-row: 1;
+  padding: 10px;
+
+}
 
 #Home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-template-rows:  repeat(2, 1fr);
   height: 1000px;
   border: 2px solid black;
   padding: 25px;
@@ -50,8 +71,6 @@ html {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: #121622;
   position: sticky; /* Safari */
