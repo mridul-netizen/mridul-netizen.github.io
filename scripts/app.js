@@ -37,3 +37,24 @@ countryForm.addEventListener('submit',e => {
         .then(data => updateUI(data))
         .catch(err => console.log(err));
 })
+
+
+
+
+//   navbar scroll behaviour
+
+$(document).scroll(function(){
+    $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height())
+  });
+
+  
+  var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}

@@ -7,37 +7,50 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/style.css">  
-
   <title>COVID TRACKER</title>
 </head>
-<body>
-
-<ul>
-  <li><a href="#About">About</a></li>
-  <li><a href="#Precautions">Precautions</a></li>
-  <li><a href="#IndiaStats">India's Stats</a></li>
-  <li><a href="#WorldStats">World Stats</a></li>
-  <li><a href="#Home">Home</a></li>
-</ul>
+<body data-spy="scroll" data-target=".navbar" data-offset = "50">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+      <a class="navbar-brand" href="#">
+        <img src="assets/covid-logo.png" width="64" height="54" alt="">
+      </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-lg-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#WorldStats">World Stats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#IndiaStats">India Stats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Precautions">Precautions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#About">About</a>
+                </li>
+                
+                  </div>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </nav> 
+</header>
 
 
 <!-- HOME -->
+
 <div class="main" id="Home">
-    <div class="content">
-      <h1>CORONA</h1>
-      <h2>Virus Disease(COVID-19)</h2>
-      <p>Pray for coronavirus victims.The virus was first reported in wuhan
-         ,Hubei,China on 17 November 2019,and on 11 March 2020,the World Health Organisation(WHO)
-          declared the outbreak a pandemic.Most people infected with the COVID-19 virus will experience
-          mild to moderate respiratory illness and recover without requiring special treatment.  Older 
-          people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic
-          respiratory disease, and cancer are more likely to develop serious illness.</p>
-    </div>
-  <div class="symptoms"><img src="assets/tenor.gif"></div>
 </div>
-
-
 
 <!-- WORLDSTATS -->
   
@@ -49,7 +62,7 @@
       <input type="text" name="country" class="form-control p-4">
     </form>
     <div class="card rounded">
-      <img src="https://via.placeholder.com/400x300" class="time card-img-top">
+      <img src="https://via.placeholder.com/350x150" class="time card-img-top">
       <div class="icon bg-light mx-auto text-center">
       <!-- icon here later -->
       </div>
@@ -106,10 +119,7 @@
 </div>
 
 <!-- SCRIPTS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
 <script src="scripts/worldData.js"></script>
 <script src="scripts/indiaData.js"></script>
