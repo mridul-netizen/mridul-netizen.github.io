@@ -1,42 +1,49 @@
-const countryForm = document.querySelector('form');
-const card = document.querySelector('.card');
-const details = document.querySelector('.details');
+// ----------------------
+//         WORLD
+// ----------------------
 
-const updateUI = (data) => {
 
-    const countryDets = data.countryDets;
-    console.log(countryDets);
-    
-};
 
-details.innerHTML = `
-    <h5 class="my-3">country name</h5>
-    <div class="my-3">Covid condition</div>
-    <div class="display-4 my-4">
-    <span>PATients</span>
-    </div>`;
+// ----------------------
+//         STATE
+// ----------------------
+// const stateForm = document.querySelector('form');
 
-const updateCountry = async(country) => {
+// const updateui = (data) => {
 
-    //console.log(country);
-    const countryDets = await getCountry(country);
-    return{ countryDets };
-};
+//   const stateDets = data.stateDets;
+//   console.log(stateDets);
+  
+// };
 
-countryForm.addEventListener('submit',e => {
+// details.innerHTML = `
+//     <h5 class="my-3">country name</h5>
+//     <div class="my-3">Covid condition</div>
+//     <div class="display-4 my-4">
+//     <span>PATients</span>
+//     </div>`;
 
-    console.clear();
-    e.preventDefault(); //to prevent default action of reloading of page
+// const updateState = async(state) => {
 
-    //get country value
-    const country = countryForm.country.value.trim();
-    countryForm.reset();
-
-    //update the UI with new country
-    updateCountry(country)
-        .then(data => updateUI(data))
-        .catch(err => console.log(err));
-})
+//       //console.log(country);
+//       const stateDets = await getCountry(state);
+//       return{ stateDets };
+//   };
+  
+//   countryForm.addEventListener('submit',e => {
+  
+//       console.clear();
+//       e.preventDefault(); //to prevent default action of reloading of page
+  
+//       //get country value
+//       const state = stateForm.state.value.trim();
+//       stateForm.reset();
+  
+//       //update the UI with new country
+//       updateCountry(state)
+//           .then(data => updateui(data))
+//           .catch(err => console.log(err));
+//   })
 
 
 
@@ -54,7 +61,8 @@ var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbar").style.top = "-60px";
+    document.getElementById("navbar").style.transition = "1s";
   }
   prevScrollpos = currentScrollPos;
 }

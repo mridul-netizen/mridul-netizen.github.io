@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
       <a class="navbar-brand" href="#">
-        <img src="assets/covid-logo.png" width="64" height="54" alt="">
+        <img src="assets/covid-logo.png" width="53" height="45" alt="">
       </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -22,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-lg-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#WorldStats">World Stats</a>
@@ -37,8 +38,7 @@
                   <a class="nav-link" href="#About">About</a>
                 </li>
                 
-                  </div>
-                </li>
+               <div class="nav-active"></div>
                 
               </ul>
               
@@ -58,23 +58,43 @@
 
   <div class="container my-5 mx-auto">
     <h1 class=" text-center">SEARCH FOR A COUNTRY</h1>
-    <form class="change-location my-4 text-center text-muted">
+    <form class="change-location my-4 text-center text-muted" id="form1">
       <input type="text" name="country" class="form-control p-4">
     </form>
-    <div class="card rounded">
-      <img src="https://via.placeholder.com/350x150" class="time card-img-top">
-      <div class="icon bg-light mx-auto text-center">
-      <!-- icon here later -->
-      </div>
-      <div class="text-muted text-uppercase text-center details">
-        <h5 class="my-3">Country name</h5>
-        <div class="my-3">Covid condition</div>
-        <div class="display-4 ">
-        <span>PATients</span>
-      </div>
-      </div>
+    <table class="table table-hover" id="details1">
+      <!-- <img src="https://via.placeholder.com/250x20" class="time card-img-top"> -->
+      <thead>
+        <tr>
+          <th>Categories</th>
+          <th>Census</th>
+        </tr>
+      </thead>
+      <div class="text-uppercase text-center details">
+      <tbody>
+        <tr>
+          <td>Country</td>
+          <td>India</td>
+        </tr>
+        <tr>
+          <td>Active</td>
+          <td>Data</td>
+        </tr>
+        <tr>
+          <td>Recovered</td>
+          <td>Data</td>
+        </tr>
+        <tr>
+          <td>Deaths</td>
+          <td>Data</td>
+        </tr>
+        <tr>
+          <td>New Cases per day</td>
+          <td>Data</td>
+        </tr>
+      </tbody>
     </div>
-  </div> 
+    </table>
+    </div>
 
 </div>
 
@@ -82,26 +102,45 @@
 
 <div class="main" id="IndiaStats">
 
-  <div class="container">
-    <h1 class="text-muted text-center my-4">COVID-19</h1>
-    <form class="change-location my-4 text-center text-muted">
-      <label for="city">Enter a location for patient information</label>
-      <input type="text" name="country" class="form-control p-4">
+  <div class="container my-5 mx-auto">
+    <h1 class=" text-center">SEARCH FOR A STATE</h1>
+    <form class="change-location my-4 text-center text-muted" id="form2">
+      <input type="text" name="state" class="form-control p-4">
     </form>
-    <div class="card shadow-lg rounded">
-      <img src="https://via.placeholder.com/400x300" class="time card-img-top">
-      <div class="icon bg-light mx-auto text-center">
-      <!-- icon here later -->
-      </div>
-      <div class="text-muted text-uppercase text-center details">
-        <h5 class="my-3">Country name</h5>
-        <div class="my-3">Covid condition</div>
-        <div class="display-4 my-4">
-        <span>PATients</span>
-      </div>
-      </div>
+    <table class="table table-hover" id="details2">
+      <!-- <img src="https://via.placeholder.com/250x20" class="time card-img-top"> -->
+      <thead>
+        <tr>
+          <th>Categories</th>
+          <th>Census</th>
+        </tr>
+      </thead>
+      <div class="text-uppercase text-center details">
+      <tbody>
+        <tr>
+          <td>State</td>
+          <td>Unknown</td>
+        </tr>
+        <tr>
+          <td>Active</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Recovered</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Deaths</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Confirmed</td>
+          <td>0</td>
+        </tr>
+      </tbody>
     </div>
-  </div> 
+    </table>
+    </div>
 
 </div>
 
@@ -124,6 +163,8 @@
 <script src="scripts/worldData.js"></script>
 <script src="scripts/indiaData.js"></script>
 <script src="scripts/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,25 @@
 
 .container{
-  max-width: 400px;
+  max-width: 800px;
 }
 html {
   scroll-behavior: smooth ;
 }
+.table{
+  color: white;
+}
+
+.container {
+  font-size: 20px;
+  border-radius: 5%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  padding: 20px;
+}
 
 #Home {
-  height: 1000px;
+  height: 720px;
   border: 2px solid black;
   padding: 25px;
   background-image: url("../assets/bg.jpg"); 
@@ -15,23 +27,21 @@ html {
   background-size: 100% 100%;
 }
 #WorldStats {
-  height: 700px;
+  height: 720px;
   border: 2px solid black;
   padding: 25px;
-  background-image: url("../assets/globe.jpg"); 
-  background-repeat: no-repeat;
+  background-color: teal;
   background-size: 100% 100%;
 }
 #IndiaStats {
-  height: 1000px;
+  height: 720px;
   border: 2px solid black;
   padding: 25px;
-  background-image: url("../assets/India.jpg"); 
-  background-repeat: no-repeat;
+  background-color: #F8F800;
   background-size: 100% 100%;
 }
 #Precautions {
-  height: 1000px;
+  height: 720px;
   border: 2px solid black;
   padding: 25px;
   background-image: url("../assets/Precautions.jpg"); 
@@ -39,7 +49,7 @@ html {
   background-size: 100% 100%;
 }
 #About {
-  height: 1000px;
+  height: 720px;
   border: 2px solid black;
   padding: 25px;
   background-image: url("../assets/About.jpg"); 
@@ -56,7 +66,7 @@ header
 
 .navbar.scrolled
 {
-    background: #000 !important;
+    background #000 !important;
     transition: 0.5s;
 }
 
@@ -76,10 +86,16 @@ header
     color: rgba(255, 255, 255, .8);
 
 }
+
+/*Added hover animaation*/
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus
 {
     color: rgba(255, 255, 255, 1);
+    /*border-radius: 20%;
+    border: 2px solid greenyellow;
+    transition: 0.2s;   <---Suspended Animation
+    padding: 5px 2px;*/
 
 }
 .navbar-light .navbar-brand,
@@ -99,3 +115,35 @@ header
     color: #000;
 }
 
+/*nav item animation*/
+.nav-active{
+  height: 2px;
+  width: 4rem;
+  background: #fff;
+  position: absolute;
+  bottom: 0.4rem;
+  transition: transform 0.6s;
+  transform: translateX(-0.1rem);
+  
+}
+.nav-item:nth-child(1):hover ~ .nav-active{
+  transform: translateX(-0.1rem);
+  
+
+}
+.nav-item:nth-child(2):hover ~ .nav-active{
+  transform: translateX(4.8rem);
+
+}
+.nav-item:nth-child(3):hover ~ .nav-active{
+  transform: translateX(10.55rem);
+
+}
+.nav-item:nth-child(4):hover ~ .nav-active{
+  transform: translateX(16.38rem);
+
+}
+.nav-item:nth-child(5):hover ~ .nav-active{
+  transform: translateX(21.3rem);
+
+}
