@@ -1,6 +1,14 @@
 const stateForm = document.getElementById('form2');
 const Details = document.getElementById('details2');
 
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
 const getState= async(state) => {
     
     const base = 'https://api.covidindiatracker.com/state_data.json';
@@ -26,7 +34,7 @@ Details.innerHTML = `
 <div class="row">
 <div class="col-lg-12">
     
-<h2>${state}</h2>
+<h2>${state.toUpperCase()}</h2>
     
 </div> 
 </div> 
@@ -40,7 +48,7 @@ Details.innerHTML = `
             
             <hr class="cell-divide-hr">
             <div class="price">
-                <span class="value">${obj.confirmed}</span>
+                <span class="value">${numberWithCommas(obj.confirmed)}</span>
                 <div class="frequency"></div>
             </div>
             <hr class="cell-divide-hr">
@@ -57,7 +65,7 @@ Details.innerHTML = `
         
         <hr class="cell-divide-hr">
         <div class="price">
-            <span class="value">${obj.active}</span>
+            <span class="value">${numberWithCommas(obj.active)}</span>
             <div class="frequency"></div>
         </div>
         <hr class="cell-divide-hr">
@@ -74,7 +82,7 @@ Details.innerHTML = `
         
         <hr class="cell-divide-hr">
         <div class="price">
-            <span class="value">${obj.recovered}</span>
+            <span class="value">${numberWithCommas(obj.recovered)}</span>
             <div class="frequency"></div>
         </div>
         <hr class="cell-divide-hr">
@@ -90,7 +98,7 @@ Details.innerHTML = `
         
         <hr class="cell-divide-hr">
         <div class="price">
-            <span class="value">${obj.deaths}</span>
+            <span class="value">${numberWithCommas(obj.deaths)}</span>
             <div class="frequency"></div>
         </div>
         <hr class="cell-divide-hr">
