@@ -12,7 +12,13 @@ head {
 }
 element.style {
 }
-@media (min-width: 3in) and (orientation: portrait)
-{
-    font-size: 4.5vw;
-}
+
+a:visited { 
+    text-decoration: none; 
+    color: blue; 
+   }
+   /* pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+  } */
