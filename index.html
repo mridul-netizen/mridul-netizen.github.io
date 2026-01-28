@@ -1,146 +1,113 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
     <meta charset="utf-8">
-    <title>Euxodous</title>
+    <title>Euxodous | Terminal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
   </head>
-  <body oncontextmenu="return false">
-    
-<pre>   
-                                                                                                                                        <button onclick=toggleMode()>Dark / Light</button>
-                                                                                                                            <!-- <div class="change-text">                                                                                                                           Dark mode was only for your eyes...
-                                                                                                                                    not for your soul
-                                                                                                                            </div> -->
-                                  +-<b>NAME</b>---------------------------------------------------------------------------------+                 
-                                  |                                                                                      |
-                                  |                                  <del>Mridul</del>  Euxodous                                    |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+  <body>
+<div class="terminal">
+<span class="prompt">[user@euxodous ~]$</span> <button id="mode-toggle" aria-label="Toggle dark/light mode">toggle-theme</button><span class="terminal-cursor"></span>
 
-                                  +-<b>SOCIAL</b>-------------------------------------------------------------------------------+
-                                  |                                                                                      |
-                                  |                                 <a href="mailto:mridulsetia18@gmail.com">mridulsetia18@gmail.com</a>                              |
-                                  |                                 <a href="https://www.linkedin.com/in/mridul-setia-990944146/">linkedin</a>                                             |
-                                  |                                 <a href="https://github.com/mridul-netizen">github</a>                                               |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+<span class="divider"></span>
+<span class="bold name">MRIDUL</span><br>
+<span class="bold">Backend Engineer</span> | OSS Contributor | Bengaluru, India<br>
+Building scalable systems, content platforms, and reliable APIs.
 
-                                  +-<b>EXPERIENCE</b>---------------------------------------------------------------------------+
-                                  |                                                                                      |
-                                  |<b>The Oppia Foundation</b>                                               Sep 2020 — Present |                  
-                                  |  -> Open Source Contributor                                                          |
-                                  |     ● Writing Frontend Unit tests                                                    |
-                                  |     ● Fixing UI bugs                                                                 |
-                                  |     ● AngularJS to Angular 2+ Migration                                              |
-                                  |     ● Typescript Strict Typing Issues                                                |
-                                  |     ● QA Testing using Jasmine                                                       |
-                                  |  -> Google Summer Of Code 2021                                     May 2021—Sep 2021 |
-                                  |     ● Working on a project to introduce strict typing into the codebase.             |
-                                  |     ● Reducing Potential Runtime Errors and making code more self-documenting.       |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+<span class="divider"></span>
+<span class="bold section-title">CONTACT</span><br>
+<span class="label">Location:</span> Bengaluru, Karnataka<br>
+<span class="label">Email:</span> <a href="mailto:mridulsetia18@gmail.com" class="bold">mridulsetia18@gmail.com</a><br>
+<span class="label">GitHub:</span> <a href="https://github.com/mridul-netizen" class="bold">mridul-netizen</a><br>
+<span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/mridul-setia-990944146/" class="bold">Mridul</a><br>
 
-                                  +-<b>EDUCATION</b>----------------------------------------------------------------------------+
-                                  |                                                                                      |
-                                  | <b>B.Tech IT</b>       -   JCBUST, FARIDABAD      -   GPA: 8.43/10      Aug 2019 — May 2023 |
-                                  | <b>Class XII CBSE</b>  -   D.A.V. Public School   -   %age: 91.08%       Apr 2018— Mar 2019 |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+<span class="divider"></span>
+<span class="bold section-title">EXPERIENCE</span><br>
+<span class="bold">CRED</span> | <span class="bold">Backend Engineer</span> <span class="date">(Jul 2023 — Present)</span><br>
+<ul>
+  <li>Built and scaled <span class="bold">CRED Garage</span>, a high-traffic vehicle management platform (1.4M+ daily actions), integrating with insurers, vendors, and government sources.</li>
+  <li>Uplifted insurance revenue by <span class="bold">34%</span> through expiry logic fixes, fallback coverage, and deeper funnel instrumentation (<span class="bold">95%+</span> bill generation reliability).</li>
+  <li>Built a content platform for all personalized and static content (articles, videos, polls, quizzes, like/share features).</li>
+  <li>Delivered quote fetching and issuance flows for 7+ insurance partners, led new insurer integrations, and developed middleware for data transformation.</li>
+  <li>Led infra for dynamic CTAs, A/B testing, and personalization (<span class="bold">5–12% CTR uplift</span>), empowering non-devs to run experiments.</li>
+  <li>Improved system performance and reduced costs (cut API costs by <span class="bold">10–11L</span>, reduced latency by <span class="bold">100ms+</span> via caching, parallelization, AST-based rendering).</li>
+  <li>Mentored engineers, reviewed systems, and drove experimentation and rollout.</li>
+</ul>
+<span class="bold">CRED</span> | <span class="bold">Backend Intern</span> <span class="date">(Jan 2023 — Jun 2023)</span><br>
+<ul>
+  <li>Contributed to the launch of <span class="bold">CRED Garage</span> by building user-facing backend services.</li>
+  <li>Designed and implemented scalable APIs for insurance views and vehicle insights.</li>
+  <li>Built a secure document upload service with S3 integration and validation.</li>
+</ul>
+<span class="bold">OPPIA</span> | <span class="bold">Google Summer of Code - Student, Mentor</span> <span class="date">(Nov 2020 — Jan 2023)</span><br>
+<ul>
+  <li>Led strict typing in a large TypeScript codebase (240+ files), improving safety.</li>
+  <li>Mentored contributors, authored guides, and promoted best practices.</li>
+  <li>Developed robust unit and E2E tests using Jasmine and Protractor.</li>
+  <li>Contributed to AngularJS-to-Angular 8+ migration.</li>
+  <li>Participated in release testing cycles, ensuring feature stability.</li>
+</ul>
 
-                                  +-<b>PROJECTS</b>-----------------------------------------------------------------------------+
-                                  |                                                                                      |
-                                  |                                    <a href="https://github.com/mridul-netizen/Blog-Angular">Angular Blog</a>                                      |
-                                  |                                    <a href="https://github.com/lulz-sec-18/covid-tracker">Covitrax</a>                                          |
-                                  |                                    <a href="https://github.com/mridul-netizen/graphql">Book Library</a>                                      |
-                                  |                                    <a href="https://github.com/mridul-netizen/pokedex">PokeDex</a>                                           |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+<span class="divider"></span>
+<span class="bold section-title">EDUCATION</span><br>
+<span class="bold">B.Tech., Information Technology</span>, J.C Bose UST, Faridabad <span class="date">(Aug 2019 — May 2023)</span><br>
+CGPA: <span class="bold">8.43/10</span><br>
+<span class="bold">Class XII, PCM</span>, DAVPS Sec.49, Faridabad <span class="date">(Apr 2019)</span><br>
+Percentage: <span class="bold">91.8%</span><br>
 
-                                  +-<b>SKILLS</b>-------------------------------------------------------------------------------+
-                                  |                                                                                      |
-                                  |  <b>Programming Languages</b>            -             C++, TypeScript, JavaScript, JAVA    |
-                                  |  <b>Front-end Development</b>            -             Angular                              |
-                                  |  <b>Backend-end Development</b>          -             NodeJS, GraphQL                      |
-                                  |  <b>Databases</b>                        -             SQL, MongoDB, Firebase, Elasticsearch|
-                                  |  <b>Deployment Tools</b>                 -             AWS, Firebase, Heroku                |
-                                  |  <b>App Development</b>                  -             Flutter (Dart)                       |
-                                  |  <b>Miscellaneous</b>                    -             Jasmine/Karma, Protractor, Git, Linux|
-                                  |  <b>Deep Learning</b>                                                                       |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+<span class="divider"></span>
+<span class="bold section-title">SKILLS</span><br>
+<span class="label">Programming Languages:</span> <span class="bold">Core JAVA, TypeScript, SQL, Python, C++</span><br>
+<span class="label">Frameworks:</span> <span class="bold">Spring Boot, Angular</span><br>
+<span class="label">Tools:</span> <span class="bold">Git, Jenkins, Apache Velocity, CI/CD</span><br>
+<span class="label">Cloud/DevOps:</span> <span class="bold">AWS</span><br>
+<span class="label">Fundamentals:</span> <span class="bold">Distributed Systems, System Design, Microservices, Reliability, Scaling</span><br>
 
-                                  +-<b>EXTRA-CURRICULAR-ACTIVITIES</b>----------------------------------------------------------+
-                                  |                                                                                      |
-                                  |  ● I like watching anime                                                             |
-                                  |  ● Ummm....that's pretty much of it                                                  |
-                                  |  ● Will fill this place later                                                        |
-                                  |  ● This one too.....                                                                 |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
+<span class="divider"></span>
+<span class="bold section-title">AWARDS & RECOGNITION</span><br>
+<ul>
+  <li>WHALEdone award from CTO at CRED for CRED Garage</li>
+  <li>Top 3% (101/3,900 teams) in Google HashCode India</li>
+  <li>Session Head, MananTechnosurge, organized technical events at university</li>
+  <li>Conducted workshops on OpenSource and WebDevelopment</li>
+  <li>Volunteer work and website development for university cultural fests</li>
+</ul>
 
-                                  +-<b>FOOTER</b>-------------------------------------------------------------------------------+
-                                  |                                                                                      |
-                                  |                                MADE WITH ♥ BY MRIDUL                                 |
-                                  |                                                                                      |
-                                  +--------------------------------------------------------------------------------------+
-
-</pre>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<span class="divider"></span>
+<span class="bold">MADE WITH <3 BY MRIDUL</span>
+<span class="divider"></span>
+</div>
 <script>
-  function toggleMode() {
-     var element = document.body;
-     element.classList.toggle("dark-mode");
-     console.log(document.getElementsByClassName("change-text"));
-     document.getElementsByClassName("change-text").innerHTML="fnbjdnbbbbbbbbbbbbbbbbbjnnnnnnnnnnnnnnnnnnnnnjnfjndjfndjnfjdnfjdnfjdnfj";
-  }
-
-
-  // Disable inspect element
-
-  jQuery(document).ready(function() {
-    function disableSelection(e) {
-        if (typeof e.onselectstart != "undefined") e.onselectstart = function() {
-            return false
-        };
-        else if (typeof e.style.MozUserSelect != "undefined") e.style.MozUserSelect = "none";
-        else e.onmousedown = function() {
-            return false
-        };
-        e.style.cursor = "default"
+  // Terminal-style dark/light mode toggle with indicator
+  document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.getElementById('mode-toggle');
+    function updateThemeButton() {
+      if (document.body.classList.contains('dark-mode')) {
+        modeToggle.textContent = 'toggle-theme (dark)';
+      } else {
+        modeToggle.textContent = 'toggle-theme (light)';
+      }
     }
-    window.onload = function() {
-        disableSelection(document.body)
-    };
-
-    window.addEventListener("keydown", function(e) {
-        if (e.ctrlKey && (e.which == 65 || e.which == 66 || e.which == 67 || e.which == 70 || e.which == 73 || e.which == 80 || e.which == 83 || e.which == 85 || e.which == 86)) {
-            e.preventDefault()
-        }
+    modeToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      updateThemeButton();
     });
-    document.keypress = function(e) {
-        if (e.ctrlKey && (e.which == 65 || e.which == 66 || e.which == 70 || e.which == 67 || e.which == 73 || e.which == 80 || e.which == 83 || e.which == 85 || e.which == 86)) {}
-        return false
-    };
+    // Set initial state
+    updateThemeButton();
 
-    document.onkeydown = function(e) {
-        e = e || window.event;
-        if (e.keyCode == 123 || e.keyCode == 18) {
-            return false
-        }
-    };
-
-    document.oncontextmenu = function(e) {
-        var t = e || window.event;
-        var n = t.target || t.srcElement;
-        if (n.nodeName != "A") return false
-    };
-    document.ondragstart = function() {
-        return false
-    };
-});
+    // Responsive divider
+    function updateDividers() {
+      const dividers = document.querySelectorAll('.divider');
+      const width = Math.floor(document.querySelector('.terminal').offsetWidth / 8); // 8px per monospace char approx
+      dividers.forEach(div => {
+        div.textContent = '='.repeat(width > 10 ? width : 40);
+      });
+    }
+    window.addEventListener('resize', updateDividers);
+    updateDividers();
+  });
 </script>
   </body>
 </html>
